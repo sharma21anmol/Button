@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Button Hover Site</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #d3d3d3; /* light grey */
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #000; /* black */
+      color: white;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-btn {
+      background-color: #000;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #000;
+      min-width: 100px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .center {
+      height: calc(100vh - 50px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .press-button {
+      background-color: black;
+      color: white;
+      padding: 15px 30px;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .press-button:hover {
+      box-shadow: 0 4px 10px purple;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="dropdown">
+      <button class="dropdown-btn">☰</button>
+      <div class="dropdown-content">
+        <!-- Blank for now -->
+      </div>
+    </div>
+  </header>
+
+  <div class="center">
+    <button class="press-button">Press me</button>
+  </div>
+</body>
+</html>
